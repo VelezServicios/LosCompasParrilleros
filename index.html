@@ -43,7 +43,6 @@
             gap: 5px;
             transition: color 0.3s;
         }
-        /* Centrado específico para el botón de Pago con Transferencia */
         nav a.transfer-btn {
             text-align: center;
         }
@@ -77,8 +76,6 @@
             white-space: nowrap;
             line-height: 1.1;
         }
-
-        /* Contenedor principal para la versión de Escritorio (Lado a Lado) */
         .content-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -87,7 +84,6 @@
             align-items: start;
             justify-items: center;
         }
-
         .section-box {
             display: flex;
             flex-direction: column;
@@ -95,14 +91,13 @@
             width: 100%;
             max-width: 420px;
         }
-
-        .maps-subtitle {
-            font-size: 16px;
-            color: #cccccc;
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
             margin-bottom: 20px;
-            display: block; 
-            margin-top: 10px;
+            color: #ffffff;
             text-align: center;
+            display: block;
         }
         .img-container {
             width: 100%;
@@ -120,8 +115,6 @@
         .maps-img:hover {
             transform: scale(1.02);
         }
-
-        /* Estilos para el mapa incrustado */
         .map-container {
             width: 100%;
             max-width: 400px;
@@ -129,7 +122,6 @@
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             border: 1px solid #333333;
-            margin-top: 10px;
         }
         .map-container iframe {
             width: 100%;
@@ -137,8 +129,6 @@
             border: 0;
             display: block;
         }
-
-        /* Ajustes para versión móvil (Apilado vertical) */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -159,7 +149,7 @@
             }
             .content-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 40px;
             }
         }
     </style>
@@ -190,22 +180,20 @@
 </header>
 
 <main>
-    <h1>Los Compas Parrileros</h1>
+    <h1>Los Compas Parrilleros</h1>
 
     <div class="content-grid">
-        <!-- Columna Izquierda: Califícanos en Google Maps -->
         <div class="section-box">
+            <span class="section-title">Reséñanos</span>
             <div class="img-container">
                 <a href="https://search.google.com/local/writereview?placeid=ChIJvUt2EgD10YURsaUNcdISHxg" rel="noopener noreferrer">
                     <img src="LCP_GOOGLE.jpg" alt="Califícanos en Google Maps" class="maps-img">
                 </a>
             </div>
-            <div class="maps-subtitle">Haz clic en la imagen</div>
         </div>
 
-        <!-- Columna Derecha: ¿Cómo llegar? y Mapa -->
         <div class="section-box">
-            <div class="maps-subtitle" style="font-weight: bold; color: #ffffff;">¿Cómo llegar?</div>
+            <span class="section-title">¿Cómo llegar?</span>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223.15929013962423!2d-99.10171884629845!3d19.695041087616893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f50012764bbd%3A0x181f12d2710da5b1!2sLOS%20COMPAS%20PARRILLEROS!5e1!3m2!1ses-419!2smx!4v1794097559706!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
