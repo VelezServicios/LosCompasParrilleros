@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Los Compas Parrileros</title>
+    <title>Sucursal - Los Compas Parrileros</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
-            color: #333333;
+            background-color: #1a1a1a;
+            color: #ffffff;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -19,14 +19,36 @@
         }
         header {
             width: 100%;
-            background-color: #f0f0f0;
-            padding: 20px;
+            background-color: #000000;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            border-bottom: 1px solid #333333;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-sizing: border-box;
-            border-bottom: 1px solid #e0e0e0;
-            gap: 20px;
+            gap: 5px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #00bcd4;
+        }
+        nav a i {
+            font-size: 18px;
+            color: #ffffff;
         }
         .logo-img {
             max-width: 250px;
@@ -35,108 +57,108 @@
         }
         main {
             width: 100%;
-            max-width: 900px;
+            max-width: 450px;
             padding: 40px 20px;
-            text-align: center;
-            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        h1 {
-            font-size: 28px;
-            color: #333333;
-            margin-bottom: 30px;
-            font-weight: bold;
-            text-transform: uppercase;
+            box-sizing: border-box;
         }
         .btn-maps {
-            background-color: #0077b6;
-            color: #ffffff;
-            padding: 20px 40px;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,119,182,0.3);
-            transition: background-color 0.3s ease, transform 0.2s;
-            margin-bottom: 40px;
             display: inline-block;
+            background-color: #2b2b2b;
+            color: #ffffff;
+            border: 1px solid #444444;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 25px;
+            transition: background-color 0.3s;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         .btn-maps:hover {
-            background-color: #005f9e;
-            transform: scale(1.02);
+            background-color: #3b3b3b;
         }
-        .map-section {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .map-title {
-            font-size: 24px;
+        .section-title {
+            font-size: 20px;
             font-weight: bold;
-            margin-bottom: 20px;
-            color: #333333;
+            margin: 20px 0 15px 0;
+            color: #ffffff;
+            text-align: center;
         }
         .map-container {
             width: 100%;
-            max-width: 800px;
-            height: 450px;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border: 1px solid #333333;
         }
         .map-container iframe {
             width: 100%;
-            height: 100%;
+            height: 300px;
             border: 0;
+            display: block;
         }
 
-        /* Ajustes para versión móvil */
+        /* Ajustes móviles */
         @media (max-width: 768px) {
             header {
-                padding: 15px 10px;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
             }
             .logo-img {
-                max-width: 200px;
+                max-width: 120px;
             }
-            h1 {
-                font-size: 24px;
-            }
-            .btn-maps {
-                padding: 15px 30px;
-                font-size: 18px;
-            }
-            .map-container {
-                height: 300px;
+            nav {
+                justify-content: center;
+                width: 100%;
+                flex-wrap: wrap;
             }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div>
-        <a href="index.html">
-            <img src="LCP_LOGO.png" alt="Los Compas Parrileros" class="logo-img">
-        </a>
-    </div>
-</header>
-
-<main>
-    <a href="PENDIENTE" class="btn-maps" target="_blank" rel="noopener noreferrer">
-        Calificar en Google Maps
-    </a>
-
-    <section class="map-section">
-        <h2 class="map-title">¿Cómo llegar?</h2>
-        <div class="map-container">
-            <!-- Reemplaza el src con el iframe específico de la sucursal de Tultepec -->
-            <iframe src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223.15929013962423!2d-99.10171884629845!3d19.695041087616893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f50012764bbd%3A0x181f12d2710da5b1!2sLOS%20COMPAS%20PARRILLEROS!5e1!3m2!1ses-419!2smx!4v1794097559706!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>"></iframe>
+    <header>
+        <div>
+            <a href="index.html">
+                <img src="LCP_LOGO.png" alt="Logo Los Compas Parrileros" class="logo-img">
+            </a>
         </div>
-    </section>
-</main>
+        <nav>
+            <a href="index.html">
+                <i class="fas fa-home"></i> Inicio
+            </a>
+            <a href="LCP_PCT.html">
+                <i class="fas fa-credit-card"></i> Pago
+            </a>
+            <a href="https://wa.me/5620904602" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-utensils"></i> Menú
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Botón de Calificar en Maps (Enlace pendiente) -->
+        <a href="#" class="btn-maps" onclick="return false;">
+            Calificar en Google Maps
+        </a>
+
+        <!-- Sección ¿Cómo llegar? con signos de interrogación -->
+        <div class="section-title">¿Cómo llegar?</div>
+
+        <!-- Mapa incrustado -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
 
 </body>
 </html>
