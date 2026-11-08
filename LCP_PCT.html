@@ -3,31 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pago con Transferencia</title>
+    <title>Pago con Transferencia - Los Compas Parrileros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
-            background-color: #f4f4f9;
+        }
+
+        header {
+            width: 100%;
+            background-color: #000000;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            border-bottom: 1px solid #333333;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        nav a i {
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .logo-img {
+            max-width: 250px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        main {
+            width: 100%;
+            max-width: 450px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
         }
 
         h2 {
-            color: #333;
-            margin-bottom: 20px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: 1px;
         }
 
         .card {
-            background: linear-gradient(135deg, #006341, #007A56);
+            background: linear-gradient(135deg, #111111, #222222);
             color: white;
             width: 100%;
-            max-width: 450px;
             padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border: 1px solid #333333;
             box-sizing: border-box;
         }
 
@@ -40,6 +100,7 @@
         .logo-container img {
             width: 150px;
             height: auto;
+            filter: brightness(0.9);
         }
 
         .info-section {
@@ -49,19 +110,22 @@
         .label {
             font-size: 0.8rem;
             text-transform: uppercase;
-            opacity: 0.8;
+            opacity: 0.7;
             margin-bottom: 5px;
+            color: #cccccc;
         }
 
         .value {
             font-size: 1.2rem;
             font-weight: bold;
             letter-spacing: 1px;
+            color: #ffffff;
         }
 
         .whatsapp-section {
             margin-top: 30px;
             text-align: center;
+            width: 100%;
         }
 
         .whatsapp-link {
@@ -74,38 +138,77 @@
             font-weight: bold;
             font-size: 1rem;
             transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
         }
 
         .whatsapp-link:hover {
             background-color: #20ba5a;
         }
+
+        /* Ajustes móviles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+            .logo-img {
+                max-width: 120px;
+            }
+            nav {
+                justify-content: center;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <h2>PAGO CON TRANSFERENCIA</h2>
-
-    <div class="card">
-        <div class="logo-container">
-            <img src="banco_logo_2.png" alt="Logo Banco">
-        </div>
-        
-        <div class="info-section">
-            <div class="label">Número de Cuenta</div>
-            <div class="value">4027 6658 6057 2297</div>
-        </div>
-
+    <header>
         <div>
-            <div class="label">Titular</div>
-            <div class="value">Raúl Martínez Carapia</div>
+            <a href="index.html">
+                <img src="LCP_LOGO.png" alt="Logo Los Compas Parrileros" class="logo-img">
+            </a>
         </div>
-    </div>
+        <nav>
+            <a href="index.html">
+                <i class="fas fa-home"></i> Inicio
+            </a>
+            <a href="https://wa.me/5620904602" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-utensils"></i> Menú
+            </a>
+        </nav>
+    </header>
 
-    <div class="whatsapp-section">
-        <a href="https://wa.me/5620904602" class="whatsapp-link" target="_blank">
-            Por favor, envía tu comprobante al WhatsApp
-        </a>
-    </div>
+    <main>
+        <h2>PAGO CON TRANSFERENCIA</h2>
+
+        <div class="card">
+            <div class="logo-container">
+                <img src="banco_logo_2.png" alt="Logo Banco">
+            </div>
+            
+            <div class="info-section">
+                <div class="label">Número de Cuenta</div>
+                <div class="value">4027 6658 6057 2297</div>
+            </div>
+
+            <div>
+                <div class="label">Titular</div>
+                <div class="value">Raúl Martínez Carapia</div>
+            </div>
+        </div>
+
+        <div class="whatsapp-section">
+            <a href="https://wa.me/5620904602" class="whatsapp-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Envía tu comprobante aquí
+            </a>
+        </div>
+    </main>
 
 </body>
 </html>
