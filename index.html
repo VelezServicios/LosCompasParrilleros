@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Los Compas Parrileros</title>
+    <title>Los Compas Parrilleros</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
-            color: #333333;
+            background-color: #1a1a1a;
+            color: #ffffff;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -19,13 +19,13 @@
         }
         header {
             width: 100%;
-            background-color: #f0f0f0;
+            background-color: #000000;
             padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-sizing: border-box;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid #333333;
         }
         nav {
             display: flex;
@@ -33,7 +33,7 @@
             align-items: center;
         }
         nav a {
-            color: #000000;
+            color: #ffffff;
             text-decoration: none;
             font-size: 14px;
             font-weight: bold;
@@ -44,11 +44,11 @@
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #0077b6;
+            color: #00bcd4;
         }
         nav a i {
             font-size: 18px;
-            color: #000000;
+            color: #ffffff;
         }
         .logo-img {
             max-width: 250px;
@@ -63,17 +63,17 @@
             box-sizing: border-box;
         }
         h1 {
-            font-size: 40px;
+            font-size: 36px;
             font-weight: bold;
             margin-bottom: 30px;
-            color: #000000;
+            color: #ffffff;
             text-align: center;
-            word-wrap: break-word;
+            white-space: nowrap;
             line-height: 1.1;
         }
         .maps-subtitle {
             font-size: 16px;
-            color: #666666;
+            color: #cccccc;
             margin-bottom: 20px;
             display: block; 
             margin-top: 10px;
@@ -89,7 +89,7 @@
             height: auto;
             border-radius: 12px;
             transition: transform 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             display: block;
         }
         .maps-img:hover {
@@ -109,9 +109,10 @@
             nav {
                 justify-content: center;
                 width: 100%;
+                flex-wrap: wrap;
             }
             h1 {
-                font-size: 28px;
+                font-size: 24px;
             }
         }
     </style>
@@ -121,7 +122,7 @@
 <header>
     <div>
         <a href="#">
-            <img src="LCP_LOGO.png" alt="Logo Los Compas Parrileros" class="logo-img">
+            <img src="LCP_LOGO.png" alt="Logo Los Compas Parrilleros" class="logo-img">
         </a>
     </div>
     <nav>
@@ -131,6 +132,9 @@
         <a href="https://wa.me/5620904602" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-utensils"></i> Menú
+        </a>
         <a href="#" onclick="return false;">
             <i class="fab fa-facebook"></i> Facebook
         </a>
@@ -138,7 +142,7 @@
 </header>
 
 <main>
-    <h1>Los Compas Parrileros</h1>
+    <h1>Los Compas Parrilleros</h1>
 
     <div class="img-container">
         <a href="https://search.google.com/local/writereview?placeid=ChIJvUt2EgD10YURsaUNcdISHxg" rel="noopener noreferrer">
